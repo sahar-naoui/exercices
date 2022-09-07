@@ -1,0 +1,34 @@
+<html>
+<head>
+<title> Mohamed : Equation de second degré </title>
+</head>
+<body>
+<center><font face="tahoma" color="#CC3333" size="2">Entrez votre équation de 2<sup>nde</sup> degré.</font></center>
+<br>
+<br>
+<script>
+function momo(ha) {
+var a=document.ha.a.value;
+var b=document.ha.b.value;
+var c=document.ha.c.value;
+var d=Math.pow(b, 2)-(4*a*c);
+if (d<0) {
+alert(' Il n y a pas de solutions');
+}
+if (d == 0) {
+alert('S = { ' + (-b / (2 * a)) + ' }');
+}
+alert('S = { ' + ((-b-(Math.sqrt(d)))/(2*a)) + ' ; ' + ((-b+(Math.sqrt(d)))/(2*a)) + ' }');
+}
+</script>
+<form name="ha">
+<input type="text" value="a" name="a" height="20" size="3"> x<sup>2</sup>+
+<input type="text" value="b" name="b" size="3"> x +
+<input type="text" value="c" name="c" size="3"> = 0
+<br>
+<center>
+<input type="button" value="Solutions" OnClick="momo(ha)">
+</center>
+</form>
+</body>
+</html>
